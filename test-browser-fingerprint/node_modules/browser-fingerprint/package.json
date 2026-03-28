@@ -1,0 +1,19 @@
+{
+  "name": "browser-fingerprint",
+  "version": "1.0.0",
+  "description": "Stable browser fingerprint (works after cache clear)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["fingerprint", "browser", "tracking", "fraud", "canvas", "webgl"],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourname/browser-fingerprint.git"
+  }
+}
