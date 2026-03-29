@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { generateBrowserFingerprint, FingerprintResult } from 'browser-fingerprint';
+import { generateBrowserFingerprint, FingerprintResult } from '@kedwithgod/browser-fingerprint';
 
 export default function BrowserFingerprint() {
   const [result, setResult] = useState<FingerprintResult | null>(null);
