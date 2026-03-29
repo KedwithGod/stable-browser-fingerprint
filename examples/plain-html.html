@@ -9,12 +9,13 @@
   </style>
 </head>
 <body>
-  <h1>Browser Fingerprint Demo</h1>
-  <button onclick="getFingerprint()">Generate Fingerprint</button>
+<h1>Browser Fingerprint Demo</h1>
+  <button id="generate-btn">Generate Fingerprint</button>
   <pre id="output">Click the button...</pre>
 
   <script type="module">
-    import { generateBrowserFingerprint } from '@kedwithgod/browser-fingerprint';
+    // Using relative path to the compiled dist folder
+    import { generateBrowserFingerprint } from '../dist/index.js';
 
     async function getFingerprint() {
       const output = document.getElementById('output');
@@ -37,6 +38,9 @@ ${JSON.stringify(result.components, null, 2)}
         console.error(err);
       }
     }
+
+    // Use addEventListener instead of onclick (since modules aren't global)
+    document.getElementById('generate-btn').addEventListener('click', getFingerprint);
 
     // Auto-run on load
     window.addEventListener('load', getFingerprint);

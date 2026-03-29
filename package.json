@@ -1,18 +1,27 @@
 {
   "name": "@kedwithgod/browser-fingerprint",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Stable browser fingerprint that works even after clearing cache. Uses Canvas, WebGL & Audio.",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist",
     "prepublishOnly": "npm run clean && npm run build",
     "test-pack": "npm pack --dry-run"
   },
-  "keywords": ["fingerprint", "browser-fingerprint", "device-fingerprint", "canvas", "webgl", "fraud-detection"],
+  "keywords": [
+    "fingerprint",
+    "browser-fingerprint",
+    "device-fingerprint",
+    "canvas",
+    "webgl",
+    "fraud-detection"
+  ],
   "author": "Your Name",
   "license": "MIT",
   "repository": {
@@ -22,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/KedwithGod/stable-browser-fingerprint/issues"
   },
-  "homepage": "https://github.com/KedwithGod/stable-browser-fingerprint#readme"
+  "homepage": "https://github.com/KedwithGod/stable-browser-fingerprint#readme",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
 }
