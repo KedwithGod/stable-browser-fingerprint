@@ -1,19 +1,26 @@
 {
   "name": "browser-fingerprint",
   "version": "1.0.0",
-  "description": "Stable browser fingerprint (works after cache clear)",
+  "description": "Stable browser fingerprint that works even after clearing cache. Uses Canvas, WebGL & Audio.",
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test-pack": "npm pack --dry-run"
   },
-  "keywords": ["fingerprint", "browser", "tracking", "fraud", "canvas", "webgl"],
+  "keywords": ["fingerprint", "browser-fingerprint", "device-fingerprint", "canvas", "webgl", "fraud-detection"],
   "author": "Your Name",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourname/browser-fingerprint.git"
-  }
+    "url": "https://github.com/KedwithGod/stable-browser-fingerprint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KedwithGod/stable-browser-fingerprint/issues"
+  },
+  "homepage": "https://github.com/KedwithGod/stable-browser-fingerprint#readme"
 }

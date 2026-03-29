@@ -1,0 +1,23 @@
+# stable-browser-fingerprint
+
+**Stable & lightweight browser fingerprinting for the modern web.**
+
+Generate the **same unique fingerprint** for the same browser/device — even if the user clears their cache, cookies, localStorage, or uses incognito mode.
+
+### Features
+- Works after clearing browser data
+- High stability on the same device (Canvas + WebGL + Audio + hardware signals)
+- Good distinction between phones vs desktops and different hardware
+- Zero dependencies
+- TypeScript support with full types
+- Small bundle size
+- No storage used (pure client-side)
+
+### Why "Stable"?
+Most fingerprint libraries change when the browser updates or user travels. This package focuses on **hardware + rendering signals** that remain consistent longer, while still providing strong uniqueness.
+
+Perfect for:
+- "Remember this device" features
+- Fraud & bot detection
+- Account security & session binding
+- Analytics without cookies

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Browser Fingerprint Test</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    pre { background: #f4f4f4; padding: 15px; border-radius: 8px; overflow: auto; }
+  </style>
+</head>
+<body>
+  <h1>Browser Fingerprint Demo</h1>
+  <button onclick="getFingerprint()">Generate Fingerprint</button>
+  <pre id="output">Click the button...</pre>
+
+  <script type="module">
+    import { generateBrowserFingerprint } from 'browser-fingerprint';
+
+    async function getFingerprint() {
+      const output = document.getElementById('output');
+      output.textContent = 'Generating stable fingerprint...';
+
+      try {
+        const result = await generateBrowserFingerprint();
+        
+        output.innerHTML = `
+Fingerprint (SHA-256):<br>
+<strong>${result.fingerprint}</strong>
+
+<br><br>Components:<br>
+${JSON.stringify(result.components, null, 2)}
+        `;
+        
+        console.log('✅ Fingerprint:', result.fingerprint);
+      } catch (err) {
+        output.textContent = `Error: ${err.message}`;
+        console.error(err);
+      }
+    }
+
+    // Auto-run on load
+    window.addEventListener('load', getFingerprint);
+  </script>
+</body>
+</html>
