@@ -1,6 +1,6 @@
 {
   "name": "@kedwithgod/browser-fingerprint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Stable browser fingerprint that works even after clearing cache. Uses Canvas, WebGL & Audio.",
   "main": "dist/index.js",
   "module": "dist/index.js",
